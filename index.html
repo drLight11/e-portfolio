@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home — Portfolio Professionale</title>
+  <meta name="description" content="Presentazione professionale in logistica, controllo qualità, gestione ordini e ristorazione." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Portfolio</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="fade-in">
+          <p class="eyebrow">Portfolio Professionale</p>
+          <h1 class="title">Gestione Operativa, <span class="accent">Logistica</span> &amp; Qualità</h1>
+          <p class="lead">
+            Una figura versatile e determinata, con solida esperienza,
+            nel controllo qualità e nella conduzione operativa di attività di ristorazione.
+          </p>
+          <div class="btn-row">
+            <a href="curriculum.html" class="btn btn-primary">Scopri il curriculum →</a>
+            <a href="contatti.html" class="btn btn-outline">Contattami</a>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="hero-image">
+            <!-- Sostituisci il file in /images/proprietario.jpg con la tua foto -->
+            <img src="images/proprietario.jpg" alt="Ritratto del proprietario del portfolio"
+                 onerror="this.style.display='none'" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHI SONO ============ -->
+  <section class="muted">
+    <div class="container-sm center">
+      <div class="fade-in">
+        <h2>Chi sono</h2>
+        <p class="subtitle" style="font-size:18px; margin-top:16px;">
+          Con anni di esperienza nel settore operativo, ho maturato competenze trasversali che spaziano
+          dalla gestione logistica al controllo qualità, dalla supervisione dei flussi d'ordine alla
+          gestione diretta di attività di ristorazione e bar. Sono una persona organizzata, con
+          grande attenzione ai dettagli e una naturale propensione al problem solving.
+        </p>
+        <p class="subtitle" style="font-size:18px; margin-top:16px;">
+          Il mio obiettivo è garantire efficienza, precisione e qualità in ogni processo,
+          contribuendo attivamente al successo dell'azienda per cui lavoro.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPETENZE ============ -->
+  <section>
+    <div class="container">
+      <div class="fade-in center">
+        <h2>Competenze chiave</h2>
+        <p class="subtitle">Un mix di competenze tecniche e trasversali maturate sul campo.</p>
+      </div>
+
+      <div class="grid grid-4" style="margin-top:48px;">
+        <div class="card fade-in" id="Competenze">
+          <div class="icon">📦</div>
+          <h3>Logistica &amp; Magazzino</h3>
+          <p>Gestione ottimizzata dei flussi di merce, stoccaggio e organizzazione del magazzino per garantire efficienza operativa.</p>
+        </div>
+        <div class="card fade-in" id="Competenze">
+          <div class="icon">🛡️</div>
+          <h3>Controllo Qualità</h3>
+          <p>Monitoraggio e verifica degli standard qualitativi, gestione delle non conformità e implementazione di procedure migliorative.</p>
+        </div>
+        <div class="card fade-in" id="Competenze">
+          <div class="icon">📋</div>
+          <h3>Gestione Ordini</h3>
+          <p>Coordinamento completo del ciclo degli ordini: ricezione, elaborazione, evasione e tracciabilità fino alla consegna.</p>
+        </div>
+        <div class="card fade-in" id="Competenze">
+          <div class="icon">☕</div>
+          <h3>Ristorazione &amp; Bar</h3>
+          <p>Esperienza diretta nella gestione operativa di bar e servizi di ristorazione, con focus su servizio clienti e organizzazione.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="container-sm center fade-in">
+      <h2>Vuoi saperne di più?</h2>
+      <p style="font-size:18px; margin-top:12px; opacity:.9;">Esplora il mio percorso professionale o scrivimi per una collaborazione.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a href="curriculum.html" class="btn btn-primary">Vai al curriculum →</a>
+        <a href="contatti.html" class="btn btn-outline">Contattami</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> — Tutti i diritti riservati.</p>
+      <p>Logistica, Controllo Qualità &amp; Gestione Operativa</p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
