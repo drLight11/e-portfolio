@@ -44,7 +44,7 @@ const Home = () => {
             </div>
             <div className="fade-in">
               <div className="hero-image">
-                <img src="/images/mainphoto.jpeg" alt="Foto professionale" />
+                <img src="/images/mainphoto.jpeg" alt="Foto professionale" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </div>
           </div>
