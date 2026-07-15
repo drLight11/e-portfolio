@@ -9,7 +9,13 @@
     "preview": "vite preview",
     "deploy": "wrangler pages deploy dist --project-name=portfolio-static --force"
   },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.21.0"
+  },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.2",
     "vite": "^5.4.10",
     "wrangler": "^4.111.0"
   }
