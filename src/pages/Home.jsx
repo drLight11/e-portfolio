@@ -1,28 +1,8 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 
 const mainPhoto = '/images/mainphoto.jpeg';
 
-const Home = () => {
-  useEffect(() => {
-    const elements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
-  return (
+const Home = () => (
     <>
       <section className="hero">
         <div className="container">
@@ -118,7 +98,6 @@ const Home = () => {
         </div>
       </section>
     </>
-  );
-};
+);
 
 export default Home;

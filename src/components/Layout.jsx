@@ -1,8 +1,12 @@
 import { Link, NavLink, Outlet } from 'react-router-dom';
+import useFadeIn from '../hooks/useFadeIn';
 
 const navLinkClass = ({ isActive }) => (isActive ? 'active' : undefined);
 
-const Layout = () => (
+const Layout = () => {
+  useFadeIn();
+
+  return (
   <>
     <header className="header">
       <div className="container header-inner">
@@ -34,6 +38,7 @@ const Layout = () => (
       </div>
     </footer>
   </>
-);
+  );
+};
 
 export default Layout;
