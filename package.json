@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "wrangler pages deploy dist --project-name=portfolio-static --force"
+    "deploy": "wrangler deploy",
+    "dev:worker": "wrangler dev"
   },
   "dependencies": {
     "react": "^18.3.1",

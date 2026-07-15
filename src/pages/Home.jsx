@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Home = () => {
   useEffect(() => {
@@ -103,10 +103,6 @@ const Home = () => {
       </footer>
     </>
   );
-};
-
-const NavLink = ({ to, children }) => {
-  return <Link to={to} className={({ isActive }) => isActive ? 'active' : ''}>{children}</Link>;
 };
 
 export default Home;
