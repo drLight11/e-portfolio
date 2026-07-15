@@ -3,8 +3,35 @@ import { Link, NavLink } from 'react-router-dom';
 
 const mainPhoto = '/images/mainphoto.jpeg';
 
-const Home = () => (
+const Home = () => {
+  useEffect(() => {
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
     <>
+      <header className="header">
+        <div className="container header-inner">
+          <Link to="/" className="logo">Portfolio</Link>
+          <nav className="nav">
+            <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
+            <NavLink to="/curriculum" className={({ isActive }) => (isActive ? 'active' : '')}>Curriculum</NavLink>
+            <NavLink to="/contatti" className={({ isActive }) => (isActive ? 'active' : '')}>Contatti</NavLink>
+          </nav>
+        </div>
+      </header>
+
       <section className="hero">
         <div className="container">
           <div className="hero-grid">
@@ -28,13 +55,7 @@ const Home = () => (
             </div>
             <div className="fade-in">
               <div className="hero-image">
-                <img
-                  src={mainPhoto}
-                  alt="Foto professionale"
-                  width={1049}
-                  height={1600}
-                  loading="eager"
-                />
+                <img src={mainPhoto} alt="Foto professionale" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </div>
           </div>
@@ -98,6 +119,13 @@ const Home = () => (
           </div>
         </div>
       </section>
+
+      <footer className="footer">
+        <div className="container footer-inner">
+          <p>&copy; <span>{new Date().getFullYear()}</span> — Tutti i diritti riservati.</p>
+          <p>Logistica, Controllo Qualità &amp; Gestione Operativa</p>
+        </div>
+      </footer>
     </>
   );
 };
